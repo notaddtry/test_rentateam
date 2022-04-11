@@ -1,0 +1,232 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.burger_menu {
+}
+
+#menu__toggle {
+  opacity: 0;
+}
+#menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  left: 0 !important;
+}
+.menu__btn {
+  position: relative;
+  top: -13px;
+  width: 16px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 2px;
+  background-color: #000;
+  transition-duration: 0.25s;
+}
+.menu__btn > span {
+  width: 10px;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -6px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 6px;
+}
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #eceff1;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  transition-duration: 0.25s;
+}
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: 0.25s;
+}
+.menu__item:hover {
+  background-color: #cfd8dc;
+}
+
+.cart {
+  background: #e4002b;
+  border-radius: 18px;
+}
+
+.cart__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+}
+.cart__sum {
+  line-height: 1;
+  color: #fff;
+  margin: 0px 0.25rem 0px 0px;
+}
+.cart__icon {
+  background: url(../../assets/images/B\ asket.svg) center center no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+/*------------MAIN*/
+
+main {
+  flex: 1 1 100%;
+}
+
+/*--------------------FOOTER*/
+
+footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  padding: 150px 0 50px;
+}
+.footer__content {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .footer__content {
+    flex-direction: column;
+  }
+  .footer__content_img {
+    display: none;
+  }
+  .footer__media_download {
+    position: static !important;
+    margin: 1rem 0px 0px 0px;
+  }
+  .footer_social {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.footer__content_list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 20%;
+}
+.footer__content_img {
+  flex: 1 1 20%;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+  min-width: 227px;
+  max-width: 227px;
+  height: 227px;
+}
+.ul__title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 40px;
+  margin: 0px 0px 23px 0px;
+
+  display: flex;
+  align-items: center;
+}
+
+.footer__content_list > li {
+  margin: 0px 0px 1rem 0px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+.footer_social {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 120px 0px 0px 0px;
+}
+.footer__media_content {
+  display: flex;
+}
+
+.footer__media_item {
+}
+.footer__media_item:not(:last-child) {
+  margin: 0px 2rem 0px 0px;
+}
+.footer_media_img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer_media_vk {
+  background: url(../../assets/images/Icon_kv.svg) center center no-repeat;
+}
+.footer_media_ok {
+  background: url(../../assets/images/Icon_ok.svg) center center no-repeat;
+}
+.footer_media_fb {
+  background: url(../../assets/images/Icon_fb.svg) center center no-repeat;
+}
+.footer_media_twitter {
+  background: url(../../assets/images/Icon_fb2.svg) center center no-repeat;
+}
+
+.footer__media_download {
+  position: absolute;
+  display: flex;
+  top: 0;
+  right: 0;
+}
+.footer__media_download_item {
+  width: 106px;
+  height: 32px;
+}
+.footer__media_download_item:not(:last-child) {
+  margin: 0px 1rem 0px 0px;
+}
+.footer__media_google_play {
+  background: url(../../assets/images/Group\ 13.jpg) center center no-repeat;
+}
+
+.footer__media_app_store {
+  background: url(../../assets/images/Download_on_the_App_Store_Badge_RU_RGB_blk_100317.jpg)
+    center center no-repeat;
+}
