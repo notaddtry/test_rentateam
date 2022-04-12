@@ -1,13 +1,14 @@
 import React from 'react'
+
 import ProductList from '../Product/ProductList'
 
 import styles from './menu.module.css'
 
-const Category = () => {
+const Category = ({ category, name }) => {
   return (
     <div className={styles.menu__category_wrapper}>
-      <h2 className={styles.category_title}>Бургеры</h2>
-      <ProductList />
+      <h2 className={styles.category_title}>{name}</h2>
+      <ProductList category={category} />
     </div>
   )
 }

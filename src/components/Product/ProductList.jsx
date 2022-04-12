@@ -3,15 +3,13 @@ import ProductItem from './ProductItem.jsx'
 
 import styles from './product.module.css'
 
-const ProductList = () => {
+const ProductList = ({ category }) => {
+  console.log(category)
   return (
     <div className={styles.product_list__wrapper}>
-      <ProductItem />
-      <ProductItem />
-      <ProductItem />
-      <ProductItem />
-      <ProductItem />
-      <ProductItem />
+      {category.map((item) => (
+        <ProductItem key={item.productId} {...item} />
+      ))}
     </div>
   )
 }

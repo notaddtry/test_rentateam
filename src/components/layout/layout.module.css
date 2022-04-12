@@ -99,7 +99,8 @@ header {
   margin: 0px 0.25rem 0px 0px;
 }
 .cart__icon {
-  background: url(../../assets/images/B\ asket.svg) center center no-repeat;
+  background: url(../../../public/assets/images/B\ asket.svg) center center
+    no-repeat;
   width: 24px;
   height: 24px;
 }
@@ -197,16 +198,20 @@ footer {
 }
 
 .footer_media_vk {
-  background: url(../../assets/images/Icon_kv.svg) center center no-repeat;
+  background: url(../../../public/assets/images/Icon_kv.svg) center center
+    no-repeat;
 }
 .footer_media_ok {
-  background: url(../../assets/images/Icon_ok.svg) center center no-repeat;
+  background: url(../../../public/assets/images/Icon_ok.svg) center center
+    no-repeat;
 }
 .footer_media_fb {
-  background: url(../../assets/images/Icon_fb.svg) center center no-repeat;
+  background: url(../../../public/assets/images/Icon_fb.svg) center center
+    no-repeat;
 }
 .footer_media_twitter {
-  background: url(../../assets/images/Icon_fb2.svg) center center no-repeat;
+  background: url(../../../public/assets/images/Icon_fb2.svg) center center
+    no-repeat;
 }
 
 .footer__media_download {
@@ -223,10 +228,11 @@ footer {
   margin: 0px 1rem 0px 0px;
 }
 .footer__media_google_play {
-  background: url(../../assets/images/Group\ 13.jpg) center center no-repeat;
+  background: url(../../../public/assets/images/Group\ 13.jpg) center center
+    no-repeat;
 }
 
 .footer__media_app_store {
-  background: url(../../assets/images/Download_on_the_App_Store_Badge_RU_RGB_blk_100317.jpg)
+  background: url(../../../public/assets/images/Download_on_the_App_Store_Badge_RU_RGB_blk_100317.jpg)
     center center no-repeat;
 }

@@ -1,0 +1,226 @@
+{
+  "category": [
+    {
+      "name": "burgers",
+      "id": "1"
+    },
+    {
+      "name": "twisters",
+      "id": "2"
+    },
+    {
+      "name": "strips",
+      "id": "3"
+    },
+    {
+      "name": "chicken",
+      "id": "4"
+    }
+  ],
+  "product": {
+    "burgers": [
+      {
+        "productName": "Бургер1",
+        "productId": "1",
+        "image": "/assets/images/Burger.jpg",
+        "price": "144",
+        "count": 0
+      },
+      {
+        "productName": "Бургер2",
+        "productId": "2",
+        "image": "/assets/images/Burger.jpg",
+        "price": "144",
+        "count": 0
+      },
+      {
+        "productName": "Бургер3",
+        "productId": "3",
+        "image": "/assets/images/Burger.jpg",
+        "price": "144",
+        "count": 0
+      },
+      {
+        "productName": "Бургер4",
+        "productId": "4",
+        "image": "/assets/images/Burger.jpg",
+        "price": "144",
+        "count": 0
+      },
+      {
+        "productName": "Бургер5",
+        "productId": "5",
+        "image": "/assets/images/Burger.jpg",
+        "price": "144",
+        "count": 0
+      },
+      {
+        "productName": "Бургер6",
+        "productId": "6",
+        "image": "/assets/images/Burger.jpg",
+        "price": "144",
+        "count": 0
+      },
+      {
+        "productName": "Бургер7",
+        "productId": "7",
+        "image": "/assets/images/Burger.jpg",
+        "price": "144",
+        "count": 0
+      }
+    ],
+    "twisters": [
+      {
+        "productName": "Твистер1",
+        "productId": "8",
+        "image": "/assets/images/Twister.jpg",
+        "price": "134",
+        "count": 0
+      },
+      {
+        "productName": "Твистер2",
+        "productId": "9",
+        "image": "/assets/images/Twister.jpg",
+        "price": "134",
+        "count": 0
+      },
+      {
+        "productName": "Твистер3",
+        "productId": "10",
+        "image": "/assets/images/Twister.jpg",
+        "price": "134",
+        "count": 0
+      },
+      {
+        "productName": "Твистер4",
+        "productId": "11",
+        "image": "/assets/images/Twister.jpg",
+        "price": "134",
+        "count": 0
+      },
+      {
+        "productName": "Твистер5",
+        "productId": "12",
+        "image": "/assets/images/Twister.jpg",
+        "price": "134",
+        "count": 0
+      },
+      {
+        "productName": "Твистер6",
+        "productId": "13",
+        "image": "/assets/images/Twister.jpg",
+        "price": "134",
+        "count": 0
+      },
+      {
+        "productName": "Твистер7",
+        "productId": "14",
+        "image": "/assets/images/Twister.jpg",
+        "price": "134",
+        "count": 0
+      }
+    ],
+    "strips": [
+      {
+        "productName": "Стрипсы1",
+        "productId": "15",
+        "image": "/assets/images/Strips.jpg",
+        "price": "104",
+        "count": 0
+      },
+      {
+        "productName": "Стрипсы2",
+        "productId": "16",
+        "image": "/assets/images/Strips.jpg",
+        "price": "104",
+        "count": 0
+      },
+      {
+        "productName": "Стрипсы3",
+        "productId": "17",
+        "image": "/assets/images/Strips.jpg",
+        "price": "104",
+        "count": 0
+      },
+      {
+        "productName": "Стрипсы4",
+        "productId": "18",
+        "image": "/assets/images/Strips.jpg",
+        "price": "104",
+        "count": 0
+      },
+      {
+        "productName": "Стрипсы5",
+        "productId": "19",
+        "image": "/assets/images/Strips.jpg",
+        "price": "104",
+        "count": 0
+      },
+      {
+        "productName": "Стрипсы6",
+        "productId": "20",
+        "image": "/assets/images/Strips.jpg",
+        "price": "104",
+        "count": 0
+      },
+      {
+        "productName": "Стрипсы7",
+        "productId": "21",
+        "image": "/assets/images/Strips.jpg",
+        "price": "104",
+        "count": 0
+      }
+    ],
+    "chicken": [
+      {
+        "productName": "Курица1",
+        "productId": "22",
+        "image": "/assets/images/Chicken.jpg",
+        "price": "194",
+        "count": 0
+      },
+      {
+        "productName": "Курица2",
+        "productId": "23",
+        "image": "/assets/images/Chicken.jpg",
+        "price": "194",
+        "count": 0
+      },
+      {
+        "productName": "Курица3",
+        "productId": "24",
+        "image": "/assets/images/Chicken.jpg",
+        "price": "194",
+        "count": 0
+      },
+      {
+        "productName": "Курица4",
+        "productId": "25",
+        "image": "/assets/images/Chicken.jpg",
+        "price": "194",
+        "count": 0
+      },
+      {
+        "productName": "Курица5",
+        "productId": "26",
+        "image": "/assets/images/Chicken.jpg",
+        "price": "194",
+        "count": 0
+      },
+      {
+        "productName": "Курица6",
+        "productId": "27",
+        "image": "/assets/images/Chicken.jpg",
+        "price": "194",
+        "count": 0
+      },
+      {
+        "productName": "Курица7",
+        "productId": "28",
+        "image": "/assets/images/Chicken.jpg",
+        "price": "194",
+        "count": 0
+      }
+    ]
+  }
+}
