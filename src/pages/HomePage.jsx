@@ -10,8 +10,10 @@ const HomePage = () => {
 
   useEffect(() => {
     const data = fetchData()
+
     dispatch(fetchProducts(data))
   }, [dispatch])
+
   return (
     <>
       <Delivery />

@@ -6,18 +6,20 @@ import MenuNav from './MenuNav'
 import { useSelector } from 'react-redux'
 
 const Menu = () => {
-  const categories = useSelector((state) => state.product.products.product)
+  const categories = useSelector((state) => state.product.products)
+  console.log(categories)
 
-  return categories !== undefined ? (
+  return (
     <div className={styles.wrapper}>
       <MenuNav />
-      <Category category={categories.burgers} name={'Бургер'} />
-      <Category category={categories.twisters} name={'Твистер'} />
-      <Category category={categories.chicken} name={'Курица'} />
-      <Category category={categories.strips} name={'Стрипс'} />
+      {categories.map((category) => (
+        <Category
+          key={category.productCategory}
+          category={category}
+          name={category.productCategory}
+        />
+      ))}
     </div>
-  ) : (
-    <></>
   )
 }
 

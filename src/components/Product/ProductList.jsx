@@ -4,7 +4,6 @@ import ProductItem from './ProductItem.jsx'
 import styles from './product.module.css'
 
 const ProductList = ({ category }) => {
-  console.log(category)
   return (
     <div className={styles.product_list__wrapper}>
       {category.map((item) => (
