@@ -43,7 +43,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
+
 .delivery__choose__type_item_red {
   background: #e4002b;
   border-radius: 4px;

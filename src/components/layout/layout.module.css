@@ -92,8 +92,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 6px 10px;
+  cursor: pointer;
 }
 .cart__sum {
+  font-family: 'Cabin Condensed', cursive;
   line-height: 1;
   color: #fff;
   margin: 0px 0.25rem 0px 0px;

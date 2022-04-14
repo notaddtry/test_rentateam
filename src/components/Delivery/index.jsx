@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { filterProducts } from '../../store/slices/productSlice'
+import { fetchProducts, filterProducts } from '../../store/slices/productSlice'
+
+import db from '../../db.json'
 
 import styles from './delivery.module.css'
 
@@ -8,33 +10,23 @@ const Delivery = () => {
   const dispatch = useDispatch()
 
   const [filter, setFilter] = useState({
-    filter: undefined,
+    filter: null,
     isFilter: false,
-    filterType: null,
   })
-
-  const handleFilter = () => {}
 
   const handleClick = (e) => {
     e.target.value === filter.filter
       ? setFilter((prev) => ({
           ...prev,
           isFilter: !prev.isFilter,
-          filterType: null,
         }))
       : setFilter((prev) => ({ ...prev, isFilter: true }))
     setFilter((prev) => ({ ...prev, filter: e.target.value }))
+
+    e.target.value === 'delivery'
+      ? dispatch(filterProducts(db))
+      : dispatch(fetchProducts(db))
   }
-
-  useEffect(() => {
-    filter.filter === 'delivery'
-      ? setFilter((prev) => ({ ...prev, filterType: true }))
-      : setFilter((prev) => ({ ...prev, filterType: false }))
-  }, [filter.filter])
-
-  useEffect(() => {
-    dispatch(filterProducts(filter))
-  }, [filter.filterType, filter.isFilter])
 
   return (
     <div className={styles.delivery_wrapper}>
@@ -55,24 +47,27 @@ const Delivery = () => {
           </button>
         </div>
       </div>
-      <div className={styles.address__wrapper}>
-        <div className={styles.address__item}>
-          <span className={styles.address__span}>Улица</span>
-          <input
-            type='text'
-            className={styles.address__input}
-            placeholder='Остоженка'
-          />
+
+      {filter.filter === 'delivery' && (
+        <div className={styles.address__wrapper}>
+          <div className={styles.address__item}>
+            <span className={styles.address__span}>Улица</span>
+            <input
+              type='text'
+              className={styles.address__input}
+              placeholder='Остоженка'
+            />
+          </div>
+          <div className={styles.address__item}>
+            <span className={styles.address__span}>Дом</span>
+            <input
+              type='text'
+              className={styles.address__input}
+              placeholder='Остоженка'
+            />
+          </div>
         </div>
-        <div className={styles.address__item}>
-          <span className={styles.address__span}>Дом</span>
-          <input
-            type='text'
-            className={styles.address__input}
-            placeholder='Остоженка'
-          />
-        </div>
-      </div>
+      )}
     </div>
   )
 }

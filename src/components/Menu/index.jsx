@@ -7,7 +7,6 @@ import { useSelector } from 'react-redux'
 
 const Menu = () => {
   const categories = useSelector((state) => state.product.products)
-  console.log(categories)
 
   return (
     <div className={styles.wrapper}>

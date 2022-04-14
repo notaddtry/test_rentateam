@@ -81,7 +81,7 @@
   position: absolute;
   bottom: 1rem;
   right: 1rem;
-  cursor: pointer;
+
   background-color: #000;
   border-radius: 20px;
   width: 104px;
@@ -92,13 +92,21 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.08);
   color: #fff;
 }
-.product_item__inc {
+.product_item__count_wrapper * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.product_item__inc,
+.product_item__dec {
+  cursor: pointer;
+  flex: 1 1 33%;
 }
 .product_item__count {
   font-weight: normal;
 }
-.product_item__dec {
-}
+
 .product_item__content {
   display: flex;
   flex-direction: column;

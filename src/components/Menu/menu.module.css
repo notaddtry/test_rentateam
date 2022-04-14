@@ -3,6 +3,10 @@
 }
 
 .menu__nav_wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
   padding: 1rem 0;
 }
 .menu__nav_list {
@@ -11,7 +15,12 @@
 }
 @media (max-width: 767px) {
   .menu__nav_wrapper {
-    display: none;
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .menu__nav_wrapper {
+    font-size: 12px;
   }
 }
 .menu__nav_item {

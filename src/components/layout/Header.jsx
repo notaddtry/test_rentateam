@@ -1,9 +1,24 @@
 import React from 'react'
 import Logo from '../UI/Logo'
+import { useDispatch, useSelector } from 'react-redux'
 
 import styles from './layout.module.css'
+import { removeAllItems } from '../../store/slices/cartSlice'
 
 const Header = () => {
+  const dispatch = useDispatch()
+  const cart = useSelector((state) => state.cart.cart)
+  const totalFromStore = useSelector((state) => state.cart.cart)
+  const totalCount = totalFromStore.reduce(
+    (acc, item) => acc + +item.totalPrice,
+    0
+  )
+
+  const printToConsole = () => {
+    console.log(cart)
+    dispatch(removeAllItems())
+  }
+
   return (
     <header>
       <div className={styles.burger_menu}>
@@ -47,8 +62,8 @@ const Header = () => {
         left={'calc(50% - 35px)'}
       />
       <div className={styles.cart}>
-        <div className={styles.cart__wrapper}>
-          <span className={styles.cart__sum}>327 Р</span>
+        <div className={styles.cart__wrapper} onClick={printToConsole}>
+          <span className={styles.cart__sum}>{totalCount} Р</span>
           <div className={styles.cart__icon} />
         </div>
       </div>

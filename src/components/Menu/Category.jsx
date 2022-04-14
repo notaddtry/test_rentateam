@@ -24,7 +24,7 @@ const Category = ({ category, name }) => {
       nameUI = 'Категория'
       break
   }
-  console.log(category)
+
   return (
     <div className={styles.menu__category_wrapper} id={name}>
       <h2 className={styles.category_title}>{nameUI}</h2>
