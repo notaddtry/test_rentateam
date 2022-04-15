@@ -1,7 +1,7 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 import styles from './menu.module.css'
-import { useSelector } from 'react-redux'
 
 const MenuNav = () => {
   const links = useSelector((state) => state.product.category)

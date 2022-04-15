@@ -1,26 +1,18 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { createSelector } from 'reselect'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import {
   addToCart,
   incrementCountProduct,
   decrementCountProduct,
 } from '../../store/slices/cartSlice'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 import styles from './product.module.css'
-
-// const productsSelector = createSelector(
-//   (state) => state.cart,
-//   (cart) => cart.cart
-// )
 
 const ProductItem = ({ productName, productId, price, image }) => {
   const dispatch = useDispatch()
 
   const productsAtCart = useSelector((state) => state.cart.cart)
-
-  // console.log(productsAtCart)
 
   const handleAddProduct = (id, productName, price) => {
     const product = {
@@ -53,7 +45,6 @@ const ProductItem = ({ productName, productId, price, image }) => {
           src={`${process.env.PUBLIC_URL}${image}`}
           alt='fastfood'
         />
-        {/* <img  /> */}
         <button
           className={styles.product_item__buy}
           onClick={() => handleAddProduct(productId, productName, price)}>

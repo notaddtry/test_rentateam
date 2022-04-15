@@ -47,7 +47,6 @@ const Delivery = () => {
   }, [address])
 
   useEffect(() => {
-    console.log(isSendToServer)
     if (isSendToServer) {
       setAddress({
         house: '',

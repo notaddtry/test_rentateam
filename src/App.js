@@ -1,5 +1,6 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
+
 import HomeLayout from './components/layout/HomeLayout'
 import HomePage from './pages/HomePage'
 
