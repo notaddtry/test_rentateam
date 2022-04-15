@@ -6,6 +6,7 @@ import {
   incrementCountProduct,
   decrementCountProduct,
 } from '../../store/slices/cartSlice'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 import styles from './product.module.css'
 
@@ -48,7 +49,11 @@ const ProductItem = ({ productName, productId, price, image }) => {
           <span className={styles.product_item__label_new}>Новое</span>
           <span className={styles.product_item__label_hit}>Хит</span>
         </div>
-        <img src={`${process.env.PUBLIC_URL}${image}`} alt='fastfood' />
+        <LazyLoadImage
+          src={`${process.env.PUBLIC_URL}${image}`}
+          alt='fastfood'
+        />
+        {/* <img  /> */}
         <button
           className={styles.product_item__buy}
           onClick={() => handleAddProduct(productId, productName, price)}>

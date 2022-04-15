@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { fetchProducts, filterProducts } from '../../store/slices/productSlice'
 
 import db from '../../db.json'
 
 import styles from './delivery.module.css'
+import {
+  editDelivery,
+  removeAllItems,
+  setIsDelivery,
+} from '../../store/slices/cartSlice'
+import DeliveryInput from './DeliveryInput'
 
 const Delivery = () => {
   const dispatch = useDispatch()
@@ -13,6 +19,10 @@ const Delivery = () => {
     filter: null,
     isFilter: false,
   })
+
+  const [address, setAddress] = useState({ street: '', house: '' })
+
+  const isSendToServer = useSelector((state) => state.cart.isSend)
 
   const handleClick = (e) => {
     e.target.value === filter.filter
@@ -23,10 +33,28 @@ const Delivery = () => {
       : setFilter((prev) => ({ ...prev, isFilter: true }))
     setFilter((prev) => ({ ...prev, filter: e.target.value }))
 
-    e.target.value === 'delivery'
-      ? dispatch(filterProducts(db))
-      : dispatch(fetchProducts(db))
+    if (e.target.value === 'delivery') {
+      dispatch(filterProducts(db))
+      dispatch(setIsDelivery(true))
+    } else {
+      dispatch(fetchProducts(db))
+      dispatch(setIsDelivery(false))
+    }
   }
+
+  useEffect(() => {
+    dispatch(editDelivery({ address }))
+  }, [address])
+
+  useEffect(() => {
+    console.log(isSendToServer)
+    if (isSendToServer) {
+      setAddress({
+        house: '',
+        street: '',
+      })
+    }
+  }, [isSendToServer])
 
   return (
     <div className={styles.delivery_wrapper}>
@@ -39,6 +67,7 @@ const Delivery = () => {
             className={`${styles.delivery__choose__type_item} ${styles.delivery__choose__type_item_red}`}>
             Доставка
           </button>
+
           <button
             value={'pickup'}
             onClick={(e) => handleClick(e)}
@@ -50,22 +79,18 @@ const Delivery = () => {
 
       {filter.filter === 'delivery' && (
         <div className={styles.address__wrapper}>
-          <div className={styles.address__item}>
-            <span className={styles.address__span}>Улица</span>
-            <input
-              type='text'
-              className={styles.address__input}
-              placeholder='Остоженка'
-            />
-          </div>
-          <div className={styles.address__item}>
-            <span className={styles.address__span}>Дом</span>
-            <input
-              type='text'
-              className={styles.address__input}
-              placeholder='Остоженка'
-            />
-          </div>
+          <DeliveryInput
+            name={'Улица'}
+            address={address.street}
+            setAddress={setAddress}
+            addressValue={'street'}
+          />
+          <DeliveryInput
+            name={'Дом'}
+            address={address.house}
+            setAddress={setAddress}
+            addressValue={'house'}
+          />
         </div>
       )}
     </div>

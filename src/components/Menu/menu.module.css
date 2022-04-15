@@ -24,19 +24,12 @@
   }
 }
 .menu__nav_item {
-}
-.menu__nav_item_active {
-  color: #e4002b;
-  position: relative;
-}
-.menu__nav_item_active:after {
-  content: '';
-  position: absolute;
-  bottom: -14px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #e4002b;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+
+  color: #9d9d9d;
 }
 
 .menu__category_wrapper {

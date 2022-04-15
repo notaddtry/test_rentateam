@@ -3,20 +3,28 @@ import Logo from '../UI/Logo'
 import { useDispatch, useSelector } from 'react-redux'
 
 import styles from './layout.module.css'
-import { removeAllItems } from '../../store/slices/cartSlice'
+import { setErrorDelivery, removeAllItems } from '../../store/slices/cartSlice'
 
 const Header = () => {
   const dispatch = useDispatch()
   const cart = useSelector((state) => state.cart.cart)
-  const totalFromStore = useSelector((state) => state.cart.cart)
-  const totalCount = totalFromStore.reduce(
-    (acc, item) => acc + +item.totalPrice,
-    0
-  )
+  const deliveryAddress = useSelector((state) => state.cart.deliveryAddress)
+  const isDelivery = useSelector((state) => state.cart.isDelivery)
+
+  const totalCount = cart.reduce((acc, item) => acc + +item.totalPrice, 0)
 
   const printToConsole = () => {
-    console.log(cart)
-    dispatch(removeAllItems())
+    if (isDelivery) {
+      if (deliveryAddress.street && deliveryAddress.house) {
+        console.log(cart)
+        dispatch(removeAllItems())
+      } else {
+        dispatch(setErrorDelivery(deliveryAddress))
+      }
+    } else {
+      console.log(cart)
+      dispatch(removeAllItems())
+    }
   }
 
   return (
@@ -29,29 +37,19 @@ const Header = () => {
 
         <ul className={styles.menu__box}>
           <li>
-            <a className={styles.menu__item} href='#'>
-              Home
-            </a>
+            <span className={styles.menu__item}>Home</span>
           </li>
           <li>
-            <a className={styles.menu__item} href='#'>
-              About
-            </a>
+            <span className={styles.menu__item}>About</span>
           </li>
           <li>
-            <a className={styles.menu__item} href='#'>
-              Team
-            </a>
+            <span className={styles.menu__item}>Team</span>
           </li>
           <li>
-            <a className={styles.menu__item} href='#'>
-              Contact
-            </a>
+            <span className={styles.menu__item}>Contact</span>
           </li>
           <li>
-            <a className={styles.menu__item} href='#'>
-              Twitter
-            </a>
+            <span className={styles.menu__item}>Twitter</span>
           </li>
         </ul>
       </div>
@@ -63,7 +61,12 @@ const Header = () => {
       />
       <div className={styles.cart}>
         <div className={styles.cart__wrapper} onClick={printToConsole}>
-          <span className={styles.cart__sum}>{totalCount} Р</span>
+          {totalCount > 0 ? (
+            <span className={styles.cart__sum}>{totalCount} Р</span>
+          ) : (
+            <></>
+          )}
+
           <div className={styles.cart__icon} />
         </div>
       </div>

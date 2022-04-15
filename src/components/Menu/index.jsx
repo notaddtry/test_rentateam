@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import Category from './Category'
 
 import styles from './menu.module.css'

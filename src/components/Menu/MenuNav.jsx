@@ -13,7 +13,7 @@ const MenuNav = () => {
           <a
             key={link.id}
             href={`#${link.id}`}
-            className={`${styles.menu__nav_item} ${styles.menu__nav_item_active}`}>
+            className={styles.menu__nav_item}>
             {link.name}
           </a>
         ))}
