@@ -190,8 +190,6 @@ footer {
   display: flex;
 }
 
-.footer__media_item {
-}
 .footer__media_item:not(:last-child) {
   margin: 0px 2rem 0px 0px;
 }
