@@ -7,7 +7,7 @@ const MenuNav = () => {
   const links = useSelector((state) => state.product.category)
 
   return links ? (
-    <div className={styles.menu__nav_wrapper}>
+    <div className={styles.menu__nav_wrapper} id={'menu__nav_wrapper'}>
       <ul className={styles.menu__nav_list}>
         {links.map((link) => (
           <a

@@ -25,6 +25,7 @@ header {
 #menu__toggle:checked ~ .menu__box {
   left: 0 !important;
 }
+
 .menu__btn {
   position: relative;
   top: -13px;
