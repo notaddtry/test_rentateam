@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Logo from '../UI/Logo'
+import Logo from '../lib/UI/Logo'
 
 import styles from './layout.module.css'
 

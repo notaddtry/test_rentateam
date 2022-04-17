@@ -41,7 +41,7 @@ const Header = () => {
   }
 
   useEffect(() => {
-    const body = document.querySelector('body')
+    const body = document.querySelector('body')``
     if (checked) body.classList.add('hidden')
     else body.classList.remove('hidden')
   }, [checked])
