@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/test_rentateam/static/css/main.759a175d.css",
-    "main.js": "/test_rentateam/static/js/main.3d1b51fa.js",
+    "main.css": "/test_rentateam/static/css/main.674a3c9c.css",
+    "main.js": "/test_rentateam/static/js/main.b64eac6a.js",
     "static/media/Icon_fb2.svg": "/test_rentateam/static/media/Icon_fb2.41fe207af4e92a5c7588.svg",
     "static/media/Icon_ok.svg": "/test_rentateam/static/media/Icon_ok.3b855f1b29d8216d0ac6.svg",
     "static/media/B asket.svg": "/test_rentateam/static/media/B asket.67e8193ac93f0169c842.svg",
@@ -9,11 +9,11 @@
     "static/media/triangle.svg": "/test_rentateam/static/media/triangle.8c4cc88eca0bb06f4c26.svg",
     "index.html": "/test_rentateam/index.html",
     "static/media/Icon_fb.svg": "/test_rentateam/static/media/Icon_fb.08a24f8cf7f61a0b5bec.svg",
-    "main.759a175d.css.map": "/test_rentateam/static/css/main.759a175d.css.map",
-    "main.3d1b51fa.js.map": "/test_rentateam/static/js/main.3d1b51fa.js.map"
+    "main.674a3c9c.css.map": "/test_rentateam/static/css/main.674a3c9c.css.map",
+    "main.b64eac6a.js.map": "/test_rentateam/static/js/main.b64eac6a.js.map"
   },
   "entrypoints": [
-    "static/css/main.759a175d.css",
-    "static/js/main.3d1b51fa.js"
+    "static/css/main.674a3c9c.css",
+    "static/js/main.b64eac6a.js"
   ]
 }
